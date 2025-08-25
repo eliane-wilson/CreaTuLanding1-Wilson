@@ -28,8 +28,12 @@ function NavBar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav me-auto">
           <li className="nav-item"><a className="nav-link" href="#">Inicio</a></li>
-          <li className="nav-item"><a className="nav-link" href="#">Diseños</a></li>
-          <li className="nav-item"><a className="nav-link" href="#">Contactanos</a></li>
+          <li className="nav-item"><a className="nav-link" href="#"> Gadgets</a></li>
+          <li className="nav-item"><a className="nav-link" href="#"> Souvenirs</a></li>
+          <li className="nav-item"><a className="nav-link" href="#"> Novedades</a></li>
+          <li className="nav-item"><a className="nav-link" href="#"> Juguetes</a></li>
+          <li className="nav-item"><a className="nav-link" href="#"> Tu diseño Personalizado</a></li>
+
         </ul>
         <CartWidget />
       </div>
