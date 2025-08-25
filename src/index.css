@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -23,12 +25,14 @@ a:hover {
 }
 
 body {
+  
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -66,3 +70,25 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.knewave-regular {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+/* Quise colocar este patron de bg pero me afecta tambien el archivo de react por opacity, queda pendiente
+perfeccionar fondo se reemplaza por imagen
+ background-color: #ffffff;
+  opacity: 0.2;
+  background: 
+    linear-gradient(135deg, #f7bd4555 25%, transparent 25%) -40px 0 / 80px 80px,
+    linear-gradient(225deg, #f7bd45 25%, transparent 25%) -40px 0 / 80px 80px,
+    linear-gradient(315deg, #f7bd4555 25%, transparent 25%) 0 0 / 80px 80px,
+    linear-gradient(45deg, #f7bd45 25%, #ffffff 25%) 0 0 / 80px 80px;
+  background-repeat: repeat;
+}*/
+

@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+.bg-logo {
+  background-image: url('https://i.imgur.com/3IPdyRV.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 100%;
+  height: 100vh;
+}

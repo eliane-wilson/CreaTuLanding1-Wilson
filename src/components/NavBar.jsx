@@ -2,7 +2,7 @@ import CartWidget from './CartWidget'
 
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3 knewave-regular">
       <a className="navbar-brand d-flex align-items-center" href="/">
         <img
           src="https://i.imgur.com/fxgDxNO.png"

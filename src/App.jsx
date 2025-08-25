@@ -10,7 +10,7 @@ function App() {
 
   return (
     
-      <div>
+      <div className="bg-logo">
       <NavBar />
       <ItemListContainer text="¡Bienvenidos a Triativ!" />
       </div>
