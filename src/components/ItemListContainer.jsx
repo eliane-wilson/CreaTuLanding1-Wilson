@@ -1,4 +1,4 @@
-function ItemListContainer({ text }) {
+function ItemListContainer() {
   return (
     <div className="container text-center my-4">
       <h2>{text}</h2>

@@ -1,43 +1,39 @@
 import CartWidget from './CartWidget'
-import { NavLink } from 'react-router'
+import { NavLink, Link } from 'react-router-dom'
+import { Navbar, Nav } from 'react-bootstrap'
+
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-3 knewave-regular">
-      <a className="navbar-brand d-flex align-items-center" href="/">
+    <Navbar expand="lg" bg="dark" variant="dark" className="px-3 knewave-regular">
+      
+      <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
         <img
           src="https://i.imgur.com/fxgDxNO.png"
           alt="Logo"
           style={{ width: '40px', height: '40px', borderRadius: '50%' }}
           className="me-2"
         />
-        Triativ
-      </a>
+        Triativ 3D
+      </Navbar.Brand>
 
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+      <Navbar.Toggle aria-controls="navbarNav" />
+      <Navbar.Collapse id="navbarNav">
+        <Nav className="me-auto">
+          
+          <Nav.Link as={NavLink} to="/" end>Inicio</Nav.Link>
 
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav me-auto">
-          <li className="nav-item"><a className="nav-link" href="#">Inicio</a></li>
-          <li className="nav-item"><a className="nav-link" href="#"> Gadgets</a></li>
-          <li className="nav-item"><a className="nav-link" href="#"> Souvenirs</a></li>
-          <li className="nav-item"><a className="nav-link" href="#"> Novedades</a></li>
-          <li className="nav-item"><a className="nav-link" href="#"> Juguetes</a></li>
-          <li className="nav-item"><a className="nav-link" href="#"> Tu diseño Personalizado</a></li>
+          
+          <Nav.Link as={NavLink} to="/category/gadgets">Gadgets</Nav.Link>
+          <Nav.Link as={NavLink} to="/category/souvenirs">Souvenirs</Nav.Link>
+          <Nav.Link as={NavLink} to="/category/novedades">Novedades</Nav.Link>
+          <Nav.Link as={NavLink} to="/category/juguetes">Juguetes</Nav.Link>
+          <Nav.Link as={NavLink} to="/category/personalizado">Tu diseño Personalizado</Nav.Link>
+        </Nav>
 
-        </ul>
+        
         <CartWidget />
-      </div>
-    </nav>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
 

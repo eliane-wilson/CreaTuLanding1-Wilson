@@ -6,8 +6,8 @@ function CartWidget() {
         3
       </span>
     </button>
-  );
+  )
 }
 
-export default CartWidget;
+export default CartWidget
 
