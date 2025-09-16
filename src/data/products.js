@@ -3,21 +3,24 @@ export const products = [
     id: '1',
     name: 'Llavero Superhéroe',
     category: 'Llaveros',
-    img: 'https://cults3d.com/3d-model/stl/keychain-superhero',
-    description: 'Llavero con diseño de superhéroe.'
+    price: 10,
+    stock: 5,
+    img: 'https://picsum.photos/200?random=1'
   },
   {
     id: '2',
-    name: 'Soporte para Smartphone',
+    name: 'Soporte Smartphone',
     category: 'Gadgets',
-    img: 'https://cults3d.com/3d-model/stl/smartphone-stand',
-    description: 'Soporte para smartphone con diseño único.'
+    price: 15,
+    stock: 8,
+    img: 'https://picsum.photos/200?random=2'
   },
   {
     id: '3',
-    name: 'Personaje en 3D',
+    name: 'Personaje 3D',
     category: 'Personajes',
-    img: 'https://cults3d.com/3d-model/stl/3d-character',
-    description: 'Modelo 3D de personaje para impresión.'
+    price: 25,
+    stock: 3,
+    img: 'https://picsum.photos/200?random=3'
   }
-]
+];

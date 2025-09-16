@@ -1,28 +1,32 @@
 import { useState } from 'react'
 
-function ItemCount({ stock }) {
-  const [count, setCount] = useState(1)
+function ItemCount({ stock, initial = 1, onAdd }) {
+  const [count, setCount] = useState(initial)
 
-  const aumentar = () => {
-    if (count < stock) {
-      setCount(count + 1)
-    }
+  const increment = () => {
+    if (count < stock) setCount(count + 1)
   }
 
-  const disminuir = () => {
-    if (count > 1) {
-      setCount(count - 1)
-    }
+  const decrement = () => {
+    if (count > 1) setCount(count - 1)
   }
 
   return (
-    <div style={{ marginTop: '10px' }}>
-      <button onClick={disminuir}>-</button>
-      <span style={{ margin: '0 10px' }}>{count}</span>
-      <button onClick={aumentar}>+</button>
+    <div className="d-flex align-items-center mt-3">
+      <button onClick={decrement} className="btn btn-secondary btn-sm">-</button>
+      <span className="mx-2">{count}</span>
+      <button onClick={increment} className="btn btn-secondary btn-sm">+</button>
+      <button 
+        onClick={() => onAdd(count)} 
+        className="btn btn-primary btn-sm ms-2"
+        disabled={stock === 0}
+      >
+        Agregar al carrito
+      </button>
     </div>
   )
 }
 
 export default ItemCount
+
 

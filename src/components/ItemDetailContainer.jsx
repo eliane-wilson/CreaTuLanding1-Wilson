@@ -4,23 +4,24 @@ import { products } from '../data/products'
 import ItemDetail from './ItemDetail'
 
 function ItemDetailContainer() {
-  const { productId } = useParams() 
+  const { productId } = useParams()
   const [product, setProduct] = useState(null)
 
   useEffect(() => {
-    const getProduct = new Promise((resolve) => {
+    const fetchProduct = new Promise((resolve) => {
       setTimeout(() => {
         resolve(products.find(p => p.id === productId))
-      }, 300)
+      }, 500)
     })
-    getProduct.then(res => setProduct(res))
+    fetchProduct.then(res => setProduct(res))
   }, [productId])
 
   return (
-    <div className="container mt-4">
-      {product ? <ItemDetail product={product} /> : <p>Cargando...</p>}
+    <div className="container mt-4 text-center">
+      {product ? <ItemDetail product={product} /> : <p>Cargando producto...</p>}
     </div>
   )
 }
 
 export default ItemDetailContainer
+
